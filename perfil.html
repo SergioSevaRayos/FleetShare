@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Raleway:wght@100&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&family=Mitr:wght@300&family=Raleway:wght@100&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>FleetShare - Plataforma de Transporte</title>
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <div class="cabecera">
+                <div class="logo">
+                    <h1 style="font-size: 60px;">FleetShare</h1>
+                </div>
+                <div>
+                    <h4>¡Eficiencia en el transporte!</h4>
+                </div>
+            </div>
+            <div class="navegacion">
+                <button id="toggleButton" class="botMenu toggle-in-portrait"><span class="material-symbols-outlined">
+                        menu
+                    </span></button>
+                <button onclick="window.location.href='index.html'">Inicio</button> <button>Transportistas</button>
+                <button>Envíos</button>
+            </div>
+        </header>
+    </div>
+    <div class="barra-lateral" id="menuDiv">
+        <ul id="bot">
+            <li id="bot1"><span class="material-symbols-outlined">
+                    person
+                </span><button>Perfil</button></li>
+            <li id="bot2"><span class="material-symbols-outlined">
+                    receipt_long
+                </span><button>Historial de Viajes</button></li>
+            <li id="bot3"><span class="material-symbols-outlined">
+                    settings
+                </span><button>Configuración</button></li>
+            <li id="bot4"><span class="material-symbols-outlined">
+                    help
+                </span><button>Ayuda</button></li>
+            <li id="bot5"><span class="material-symbols-outlined">
+                    alternate_email
+                </span><button>Contacto</button></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <main>
+            <!-- Contenido principal de la plataforma -->
+            <div class="perfil">
+                <div class="miperfil">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                    <button onclick="window.location.href='miperfil.html'">Acceder a mi perfil</button>
+                </div>
+                <div class="nuevoperfil">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                    <button onclick="window.location.href='crearperfil.html'">Nuevo</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="footer">
+        <footer id="footer">
+            <div class="derechos">
+                Todos los derechos reservados &copy; <strong style="color: red;">SsrSpainGroup@gmail.com</strong>
+            </div>
+            <div class="informacion">
+                <div>
+                    <ul>
+                        <li>Contacto</li>
+                        <li>Ayuda</li>
+                        <li>Empresa</li>
+                        <li>Política de privacidad</li>
+                </div>
+                <div>
+                    <img src="media/img/logotipo_171x94.png" alt="">
+                </div>
+                <div>
+                    <ul>
+                        <li>Servicios</li>
+                        <li>Inicio</li>
+                        <li>Transportistas</li>
+                        <li>Mís envios</li>
+
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="logica.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,426 @@
+/* #########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################ */
+/* Inicio para el contenido "colores" _______________________________________________________*/
+/* __________________________________________________________________________________________*/
+:root {
+    --color-barrHorFoot: #05032b;
+    --color-hover: #0011ff;
+    --color-fondo: #033e55;
+    --color-texto: #ffffff;
+    --color-texto-main: #000000;
+    --color-boton: #0026ff;
+    --color-cabecera: #033e55;
+    --color-barralat: #033e55;
+}
+
+/* Fin para el contenido "colores" __________________________________________________________*/
+/* __________________________________________________________________________________________*/
+/* #########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################ */
+/* Inicio para el contenido "cuerpo" ________________________________________________________*/
+/* __________________________________________________________________________________________*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+}
+
+/* Estilo general para el cuerpo del documento */
+body {
+    font-family: 'Mitr', sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "barra-lateral main"
+        "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 270px 1fr;
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+}
+
+/* Estilo para el encabezado */
+.header {
+    grid-area: header;
+    background-color: var(--color-barrHorFoot);
+    color: white;
+}
+
+.cabecera {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-cabecera);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 5px;
+}
+
+.botMenu {
+    display: none;
+}
+
+.navegacion button {
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    color: var(--color-texto);
+    transition: 300ms;
+}
+
+.navegacion button:hover {
+    color: var(--color-hover);
+}
+
+/* Estilo para la barra lateral */
+.barra-lateral {
+    padding: 20px;
+    grid-area: barra-lateral;
+    background-color: var(--color-barralat);
+    color: var(--color-texto);
+    border-right: 2px solid white;
+}
+
+.barra-lateral>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    translate: -400px;
+}
+
+.barra-lateral>ul>li {
+    list-style: none;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.barra-lateral>ul>li>button {
+    width: auto;
+    height: 30px;
+    font-size: 17px;
+    padding-left: 10px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-texto);
+    transition: 300ms;
+}
+
+.barra-lateral>ul>li>button:hover {
+    color: var(--color-hover);
+    font-size: 18px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+/* Fin para el contenido "cuerpo" ___________________________________________________________*/
+/* __________________________________________________________________________________________*/
+/* #########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################ */
+/* Inicio para el contenido "inicio" ________________________________________________________*/
+/* __________________________________________________________________________________________*/
+.main {
+    grid-area: main;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-main);
+
+}
+
+.texto-inicio {
+    background-color: var(--color-fondo);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.parrafo {
+    font-size: 20px;
+    padding: 30px;
+    color: var(--color-texto);
+    background-color: #05032bc2;
+    font-family: 'Source Code Pro', monospace;
+    text-align: justify;
+    height: 110vh;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+
+}
+
+.informacion>div>ul>li {
+    list-style: none;
+    font-size: 12px;
+    padding: 10px;
+}
+
+/* Fin para el contenido "inicio" ___________________________________________________________*/
+/* __________________________________________________________________________________________*/
+/* #########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################ */
+/* Inicio para el contenido "perfil" ________________________________________________________*/
+/* __________________________________________________________________________________________*/
+.perfil {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    height: 600px;
+}
+
+.miperfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+}
+
+.miperfil>span {
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.miperfil>button {
+    font-size: 17px;
+    color: var(--color-texto);
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    transition: 300ms;
+}
+
+.miperfil>button:hover {
+    color: var(--color-hover);
+    font-size: 18px;
+}
+
+.nuevoperfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+}
+
+.nuevoperfil>span {
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.nuevoperfil>button {
+    font-size: 17px;
+    color: var(--color-texto);
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    transition: 300ms;
+}
+
+.nuevoperfil>button:hover {
+    color: var(--color-hover);
+    font-size: 18px;
+}
+
+/* Fin para el contenido "perfil" ___________________________________________________________*/
+/* __________________________________________________________________________________________*/
+/* #########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################ */
+/* Inicio para el contenido "iniciarperfil" _________________________________________________*/
+/* __________________________________________________________________________________________*/
+.login-container {
+    margin: auto;
+    width: 300px;
+    height: 600px;
+    margin-top: 100px;
+    color: var(--color-texto);
+    font-weight: bold;
+}
+
+.login-container>form>input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: var(--color-barrHorFoot);
+    color: var(--color-texto);
+}
+
+.login-container>form>input::placeholder {
+    color: rgba(255, 255, 255, 0.445); 
+}
+
+.login-container>form>button {
+    padding: 10px 20px;
+    background-color: var(--color-barrHorFoot);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+
+.login-container>form>button:hover {
+    background-color: var(--color-hover);
+    ;
+
+}
+
+/* Fin para el contenido "iniciarperfil" ____________________________________________________*/
+/* __________________________________________________________________________________________*/
+/* #########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################ */
+/* Inicio para el contenido "crearperfil" ___________________________________________________*/
+/* __________________________________________________________________________________________*/
+.form-crearperfil {
+    margin: auto;
+    width: 300px;
+    height: 600px;
+    margin-top: 100px;
+    color: var(--color-texto);
+    font-weight: bold;
+}
+
+.form-crearperfil>form>input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: var(--color-barrHorFoot);
+    color: var(--color-texto);
+}
+
+.form-crearperfil>form>input::placeholder {
+    color: rgba(255, 255, 255, 0.445);
+}
+
+.form-crearperfil>form>button {
+    padding: 10px 20px;
+    background-color: var(--color-barrHorFoot);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+/* Fin para el contenido "crearperfil" ______________________________________________________*/
+/* __________________________________________________________________________________________*/
+/* #########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################ */
+/* Inicio para el contenido "footer" ________________________________________________________*/
+/* __________________________________________________________________________________________*/
+.footer {
+    padding: 5px;
+    grid-area: footer;
+    text-align: center;
+    background-color: var(--color-barrHorFoot);
+    color: var(--color-texto);
+    border-top: 2px solid white;
+}
+
+/* Fin para el contenido "footer" ___________________________________________________________*/
+/* __________________________________________________________________________________________*/
+/* #########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################ */
+/* #########################################################################################
+############################################################################################
+############################################################################################
+############################################################################################ */
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~RESPONSIBE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* Estilos para el pie de página en orientación vertical */
+@media (orientation: portrait) {
+    body {
+        grid-template-areas:
+            "header header"
+            "barra-lateral barra-lateral"
+            "main main"
+            "footer footer";
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .navegacion>button {
+        margin: auto;
+        font-size: 17px;
+    }
+
+    .navegacion .botMenu {
+        display: contents;
+    }
+
+    .barra-lateral {
+        border: none;
+        display: none;
+    }
+
+    .barra-lateral>ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+    }
+
+    .texto-inicio {
+        height: 100%;
+    }
+}
+
+/* Estilos para el pie de página en orientación horizontal */
+@media (orientation: landscape) {
+    .texto-inicio {
+        height: 100%;
+    }
+}
