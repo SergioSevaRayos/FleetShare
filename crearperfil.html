@@ -41,7 +41,8 @@
                 <button id="toggleButton" class="botMenu toggle-in-portrait"><span class="material-symbols-outlined">
                         menu
                     </span></button>
-                <button onclick="window.location.href='index.html'">Inicio</button> <button>Transportistas</button>
+                <button onclick="window.location.href='index.html'">Inicio</button>
+                <button>Transportistas</button>
                 <button>Envíos</button>
             </div>
         </header>
@@ -69,29 +70,52 @@
     <div class="main">
         <main>
             <div class="form-crearperfil">
-                <h2>Crear Perfil</h2>
-                <button class="btn-tipo-usuario" data-tipo="camionero">Camionero Autónomo</button>
-                <button class="btn-tipo-usuario" data-tipo="empresa">Empresa Contratante</button>
-
-                <form action="/procesar_perfil" method="post">
-                    <div class="campos-camionero campos-usuario oculto">
-                        <!-- Campos para camionero autónomo -->
-                        <input type="text" name="tipo_camion" placeholder="Tipo de camión">
-                        <input type="text" name="capacidad_carga" placeholder="Capacidad de carga">
-                    </div>
-
-                    <div class="campos-empresa campos-usuario oculto">
-                        <!-- Campos para empresa contratante -->
-                        <input type="text" name="tipo_carga" placeholder="Tipo de carga">
-                        <input type="text" name="origen_envio" placeholder="Origen del envío">
-                    </div>
-
+                <div class="crear-perfil">
+                    <h2>Crear Perfil</h2>
                     <input type="text" name="nombre" placeholder="Nombre completo">
                     <input type="email" name="correo" placeholder="Correo electrónico">
                     <input type="tel" name="telefono" placeholder="Teléfono">
+                </div>
 
-                    <button type="submit">Crear Perfil</button>
-                </form>
+                <div class="botones-crearperfil">
+                    <button class="btn-tipo-usuario" data-tipo="camionero">Camionero</button>
+                    <button class="btn-tipo-usuario" data-tipo="empresa">Empresa</button>
+                </div>
+
+                <div class="formulario-crearperfil">
+                    <form>
+                        <div class="campos-camionero">
+                            <!-- Campos para camionero autónomo -->
+                            <label for="tipo_camion">Tipo de camión:</label>
+                            <select name="tipo_camion">
+                                <option value="rigidof">Rígido (Frigorífico)</option>
+                                <option value="rigidol">Rígido (Lona)</option>
+                                <option value="articuladof">Articulado (Frigorífico)</option>
+                                <option value="articuladol">Articulado (Lona)</option>
+                                <option value="trailerf">Trailer  (Frigorífico)</option>
+                                <option value="trailerl">Trailer  (Lona)</option>
+                                <option value="tren_de_carreteraf">Tren de Carretera (Frigorífico)</option>
+                                <option value="tren_de_carreteral">Tren de Carretera (Lona)</option>
+                                <option value="megatrailerf">Megatrailer (Frigorífico)</option>
+                                <option value="megatrailerl">Megatrailer (Lona)</option>
+                            </select>
+                            <label for="tipo_camion">Capacidad:</label>
+                            <select name="tipo_camion">
+                                <option value="cat1">Categoría 1 (hasta 3.500 kg)</option>
+                                <option value="cat2">Categoría 2 (entre 3.500 kg y 12.000 kg)</option>
+                                <option value="cat3">Categoría 3 (supera los 12.000 kg)</option>
+                            </select>
+                        </div>
+
+                        <div class="campos-empresa">
+                            <!-- Campos para empresa contratante -->
+                            <input type="text" name="tipo_carga" placeholder="Tipo de carga">
+                            <input type="text" name="origen_envio" placeholder="Origen del envío">
+                        </div>
+
+                        <button type="submit" class="bot-crear-perfil">Crear Perfil</button>
+                    </form>
+                </div>
             </div>
         </main>
     </div>

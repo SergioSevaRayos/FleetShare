@@ -276,6 +276,12 @@ body {
     font-weight: bold;
 }
 
+.login-container>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .login-container>form>input {
     width: 100%;
     padding: 10px;
@@ -287,7 +293,7 @@ body {
 }
 
 .login-container>form>input::placeholder {
-    color: rgba(255, 255, 255, 0.445); 
+    color: rgba(255, 255, 255, 0.445);
 }
 
 .login-container>form>button {
@@ -300,11 +306,8 @@ body {
     transition: 300ms;
 }
 
-
 .login-container>form>button:hover {
     background-color: var(--color-hover);
-    ;
-
 }
 
 /* Fin para el contenido "iniciarperfil" ____________________________________________________*/
@@ -316,6 +319,9 @@ body {
 /* Inicio para el contenido "crearperfil" ___________________________________________________*/
 /* __________________________________________________________________________________________*/
 .form-crearperfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto;
     width: 300px;
     height: 600px;
@@ -323,22 +329,64 @@ body {
     color: var(--color-texto);
     font-weight: bold;
 }
-
-.form-crearperfil>form>input {
-    width: 100%;
-    padding: 10px;
+.crear-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;
+}
+.crear-perfil>input{
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background-color: var(--color-barrHorFoot);
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #05032b;
     color: var(--color-texto);
 }
-
-.form-crearperfil>form>input::placeholder {
-    color: rgba(255, 255, 255, 0.445);
+.crear-perfil>input::placeholder {
+    color: rgb(255, 255, 255);
 }
 
-.form-crearperfil>form>button {
+.botones-crearperfil{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.botones-crearperfil>button {
+    font-size: 17px;
+    color: var(--color-texto);
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    transition: 300ms;
+    margin: 20px;
+    height: 40px;
+}
+.botones-crearperfil>button:hover {
+    color: var(--color-hover);
+    font-size: 18px;
+}
+
+.formulario-crearperfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+.formulario-crearperfil>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario-crearperfil>form>input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+.bot-crear-perfil{
+    margin-top: 20px;
     padding: 10px 20px;
     background-color: var(--color-barrHorFoot);
     color: #fff;
@@ -347,6 +395,36 @@ body {
     cursor: pointer;
     transition: 300ms;
 }
+.bot-crear-perfil:hover{
+    background-color: var(--color-hover);
+}
+
+.campos-camionero{
+    text-align: center;
+}
+.campos-camionero>select{
+    text-align: center;
+    background-color: var(--color-barrHorFoot);
+    color: white;
+    font-weight: 400;
+}
+select[name="tipo_camion"] option {
+    padding: 8px;
+    font-size: 14px;
+    background-color: var(--color-barrHorFoot);
+    color: white;
+}
+select[name="tipo_camion"]:focus {
+    border-color: #007bff;
+    background-color: var(--color-barrHorFoot);
+    outline: none;
+}
+
+
+.campos-empresa{
+    text-align: center;
+}
+
 
 /* Fin para el contenido "crearperfil" ______________________________________________________*/
 /* __________________________________________________________________________________________*/
@@ -402,6 +480,10 @@ body {
 
     .barra-lateral {
         border: none;
+
+    }
+
+    .oculto {
         display: none;
     }
 
@@ -414,13 +496,22 @@ body {
     }
 
     .texto-inicio {
-        height: 100%;
+        min-height: 120vh;
     }
+
+    .parrafo {
+        height: 123vh;
+    }
+
 }
 
 /* Estilos para el pie de página en orientación horizontal */
 @media (orientation: landscape) {
     .texto-inicio {
         height: 100%;
+    }
+
+    .parrafo {
+        height: 180vh;
     }
 }
