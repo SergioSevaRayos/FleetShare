@@ -425,6 +425,9 @@ select[name="tipo_camion"]:focus {
     text-align: center;
 }
 
+.swal2-title{
+    color: red;
+}
 
 /* Fin para el contenido "crearperfil" ______________________________________________________*/
 /* __________________________________________________________________________________________*/
